@@ -1,0 +1,1202 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  list-style-type: none;
+}
+body {
+  font-size: 16px;
+  font-weight: 400;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Tablet-And-Mobile-BarDiv & ULDIV */
+.navbar .bar-div,
+.tablet-navbar-ul-div {
+  display: none;
+}
+
+/* Variables */
+:root {
+  --black-color: hsl(0, 0%, 0%);
+  --white-color: hsl(0, 0%, 100%);
+  --grayish-blue: hsl(210, 20%, 96%);
+  --red-color: hsl(0, 100%, 50%);
+  --mid-gray: hsl(0, 0%, 43%);
+  --mint-green: hsl(135, 100%, 76%);
+  --electric-indigo: hsl(244, 86%, 59%);
+  --red-orange: hsl(0, 90%, 63%);
+  --gunmetal-color: hsl(225, 31%, 13%);
+}
+
+/* Navbar-Div-Start */
+.navbar {
+  width: 100%;
+  height: 80px;
+  padding: 15px 150px;
+  position: fixed;
+  z-index: 9999;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--grayish-blue);
+}
+.navbar .navbar-logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--black-color);
+}
+.navbar .navbar-logo span {
+  text-transform: capitalize;
+}
+.navbar .navbar-ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding-inline: 30px;
+}
+.navbar .navbar-ul li {
+  padding-inline: 15px;
+}
+.navbar .navbar-ul li a {
+  color: var(--black-color);
+}
+.navbar .navbar-ul li * {
+  text-transform: capitalize;
+}
+.navbar button {
+  margin-inline-start: auto;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--electric-indigo);
+}
+.navbar button a {
+  color: var(--white-color);
+  font-weight: 500;
+  font-size: 16px;
+}
+.navbar button span {
+  text-transform: capitalize;
+}
+/* Navbar-Div-End */
+
+.container {
+  display: flex;
+  margin: auto;
+}
+.home,
+.demos,
+.pages,
+.caseStudy,
+.support,
+.contact {
+  width: 100%;
+  padding-inline: 150px;
+  scroll-margin-top: 80px;
+}
+
+/* Home-Div-Start */
+.home {
+  height: 100vh;
+  padding-top: 100px;
+  background-color: var(--grayish-blue);
+  display: flex;
+}
+.home .container {
+  height: 100%;
+  flex-direction: row;
+  align-items: center;
+}
+.home span {
+  text-transform: capitalize;
+}
+.home .leftDiv {
+  width: 60%;
+}
+.home .rightDiv {
+  width: 40%;
+}
+.home .leftDiv .para1 {
+  color: var(--red-color);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.home .leftDiv h1 {
+  font-size: 45px;
+  font-weight: 600;
+  padding-block: 20px;
+  line-height: 110%;
+}
+.home .leftDiv .para2 {
+  color: var(--mid-gray);
+}
+.home .leftDiv button {
+  padding: 10px 15px;
+  margin-block: 30px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--electric-indigo);
+}
+.home .leftDiv button a {
+  color: var(--white-color);
+  font-weight: 500;
+  font-size: 16px;
+}
+.home .rightDiv .imgDiv svg {
+  width: 80%;
+  margin-left: 20%;
+}
+/* Home-Div-End */
+
+/* Demos-Div-Start */
+.demos {
+  /* margin-block: 80px; */
+  background-color: var(--white-color);
+}
+.demos .container {
+  padding-block: 80px;
+  justify-content: center;
+}
+.demos span {
+  text-transform: capitalize;
+}
+.demos .header1 {
+  text-align: center;
+}
+.demos .header1 h2 {
+  font-size: 28px;
+  padding-top: 20px;
+  text-transform: uppercase;
+  color: var(--red-color);
+}
+.demos .header1 h3 {
+  font-size: 24px;
+  padding-top: 10px;
+  padding-inline: 300px;
+}
+.demos .services {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.demos .trackDiv {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-block: 100px;
+  text-align: center;
+}
+.demos .trackDiv .graphic {
+  background-color: var(--mint-green);
+}
+.demos .trackDiv .web {
+  background-color: var(--electric-indigo);
+}
+.demos .trackDiv .content {
+  background-color: var(--red-orange);
+}
+.demos .trackDiv .graphic,
+.web,
+.content {
+  width: 32%;
+  padding: 50px 10px 30px;
+  border-radius: 10px;
+  color: var(--white-color);
+}
+.demos .trackDiv h4 {
+  font-size: 20px;
+  text-transform: capitalize;
+  padding-block: 20px;
+}
+.demos .linkDiv {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.demos .linkDiv a {
+  padding-right: 10px;
+  color: var(--white-color);
+}
+.demos .txtDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-inline: 100px;
+}
+.demos .txtDiv .imgDiv {
+  width: 20%;
+}
+.demos .txtDiv .imgDiv svg {
+  width: 80%;
+}
+.demos .txtDiv .rightDiv {
+  width: 80%;
+  padding-block: 20px;
+  padding-right: 80px;
+}
+.demos .txt p {
+  font-weight: 700;
+}
+.demos .txt .para1 {
+  padding-block: 20px;
+}
+.demos .txt .para1 span {
+  text-transform: uppercase;
+}
+.demos .txt .para2 {
+  font-size: 15px;
+  text-transform: capitalize;
+}
+.demos .txt .para2 span {
+  color: var(--mid-gray);
+}
+.demos .story {
+  padding-top: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.demos .header2 h2 {
+  font-size: 28px;
+  text-transform: uppercase;
+  color: var(--red-color);
+}
+.demos .header2 h3 {
+  font-size: 24px;
+  padding-top: 10px;
+  max-width: 400px;
+}
+.demos .story .imgDiv {
+  width: 100%;
+  display: flex;
+}
+.demos .story .svg0 {
+  width: 950px;
+  padding-top: 80px;
+}
+.demos .story .rightDiv {
+  display: flex;
+  flex-direction: column;
+  padding-left: 80px;
+}
+.demos .story .rightDiv .imgDiv {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.demos .story .svg1 {
+  width: 280px;
+}
+.demos .story .svg2 {
+  width: 150px;
+  position: absolute;
+  left: 205px;
+  top: -20px;
+}
+.demos .story .svg3 {
+  position: absolute;
+  right: 0;
+  top: 100px;
+}
+.demos .story .rightDiv p {
+  padding-top: 40px;
+  color: var(--mid-gray);
+  padding-right: 140px;
+}
+.demos .story .rightDiv p span {
+  text-transform: capitalize;
+}
+.demos .numeric-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 80px;
+}
+.demos .numeric-div div {
+  width: 32%;
+  text-align: center;
+}
+.demos .numeric-div h4 {
+  text-transform: uppercase;
+  font-size: 26px;
+}
+.demos .numeric-div p {
+  padding-top: 10px;
+  color: var(--mid-gray);
+}
+/* Demos-Div-End */
+
+/* Pages-Div-Start */
+.pages {
+  margin-block: 50px;
+  background-color: var(--grayish-blue);
+  position: relative;
+  display: flex;
+}
+.pages .container {
+  padding-block: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pages span {
+  text-transform: capitalize;
+}
+.pages .header {
+  text-align: center;
+}
+.pages .header h2 {
+  font-size: 28px;
+  padding-top: 20px;
+  text-transform: uppercase;
+  color: var(--red-color);
+}
+.pages .header h3 {
+  font-size: 24px;
+  padding-top: 10px;
+  padding-inline: 320px;
+}
+.pages .svg1 {
+  position: absolute;
+  left: 40px;
+  top: 180px;
+}
+.pages .midDiv {
+  padding-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.pages .mainDiv {
+  width: 48%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-block: 10px;
+}
+.pages .txtDiv {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 30px;
+}
+.pages .txtDiv h4 {
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+.pages .txtDiv p {
+  color: var(--mid-gray);
+}
+.pages .botDiv {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 50px;
+}
+.pages .botDiv h5 {
+  font-size: 17px;
+}
+.pages .botDiv p {
+  padding-top: 10px;
+  width: 500px;
+  color: var(--mid-gray);
+}
+.pages button {
+  font-size: 16px;
+  padding: 10px 15px;
+  margin-block: 30px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--electric-indigo);
+}
+.pages button a {
+  color: var(--white-color);
+}
+/* Pages-Div-End */
+
+/* CaseStudies-Div-Start */
+.caseStudy {
+  margin-block: 50px;
+  display: flex;
+  background-color: var(--white-color);
+}
+.caseStudy .container {
+  padding-block: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.caseStudy span {
+  text-transform: capitalize;
+}
+.caseStudy .header {
+  text-align: center;
+}
+.caseStudy .header h2 {
+  font-size: 28px;
+  padding-top: 20px;
+  text-transform: uppercase;
+  color: var(--red-color);
+}
+.caseStudy .header h3 {
+  font-size: 24px;
+  padding-top: 10px;
+  padding-inline: 330px;
+}
+.caseStudy .imgDiv {
+  width: 100%;
+  padding-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.caseStudy .mainDiv {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  text-transform: capitalize;
+}
+.caseStudy .mainDiv h4 {
+  padding-top: 20px;
+  padding-left: 20px;
+  color: var(--mid-gray);
+}
+.caseStudy .mainDiv p {
+  padding-left: 20px;
+  padding-top: 5px;
+  font-weight: 500;
+}
+.caseStudy .mainDiv p span {
+  text-transform: uppercase;
+}
+.caseStudy .div4 {
+  margin-top: -180px;
+}
+.caseStudy .linkDiv {
+  padding-top: 30px;
+  display: flex;
+  align-items: center;
+  color: var(--white-color);
+}
+.caseStudy .linkDiv a {
+  color: var(--electric-indigo);
+  padding-right: 10px;
+}
+/* CaseStudies-Div-End */
+
+/* Support-Div-Start */
+.support {
+  display: flex;
+  text-align: center;
+  padding-block: 80px;
+  background-color: var(--electric-indigo);
+}
+.support .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.support span {
+  text-transform: capitalize;
+}
+.support h2 {
+  font-size: 18px;
+  color: var(--mint-green);
+  text-transform: uppercase;
+}
+.support p {
+  font-size: 17px;
+  font-weight: 500;
+  padding-top: 15px;
+  padding-inline: 300px;
+  color: var(--white-color);
+}
+.support .imgDiv {
+  padding-top: 30px;
+  text-transform: capitalize;
+  color: var(--white-color);
+}
+/* Support-Div-End */
+
+/* Contact-Div-Start */
+.contact {
+  display: flex;
+  padding-top: 80px;
+  background-color: var(--gunmetal-color);
+}
+.contact .container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact span {
+  text-transform: capitalize;
+}
+.contact .topDiv {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 50px;
+}
+.contact .topDiv h5 {
+  color: var(--white-color);
+  font-size: 18px;
+}
+.contact .topDiv p {
+  padding-top: 10px;
+  width: 500px;
+  color: var(--mid-gray);
+}
+.contact button {
+  font-size: 16px;
+  padding: 10px 15px;
+  margin-block: 30px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--electric-indigo);
+}
+.contact button a {
+  color: var(--white-color);
+}
+.contact footer {
+  width: 100%;
+  padding-block: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.contact .ul1 {
+  width: 28%;
+}
+footer .footer-logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--white-color);
+}
+footer ul li {
+  padding-block: 5px;
+}
+.contact .ul1 p {
+  color: var(--mid-gray);
+}
+.contact .ul1 .social {
+  padding-top: 15px;
+  display: flex;
+}
+.contact .ul1 .social svg {
+  margin-right: 20px;
+}
+.contact .ul2,
+.ul3,
+.ul4,
+.ul5 {
+  text-transform: capitalize;
+}
+.contact ul .header {
+  color: var(--mid-gray);
+}
+.contact ul li a {
+  color: var(--white-color);
+}
+/* Contact-Div-End */
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+/* @media (min-width: 1399.98px) {} */
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1199.98px) {
+  .navbar,
+  .home,
+  .demos,
+  .pages,
+  .caseStudy,
+  .support,
+  .contact {
+    padding-inline: 100px;
+  }
+  .demos .header1 h3,
+  .pages .header h3,
+  .caseStudy .header h3 {
+    padding-inline: 250px;
+  }
+  .demos .txtDiv {
+    padding-inline: 25px;
+  }
+  .pages .mainDiv {
+    justify-content: center;
+    text-align: center;
+  }
+  .pages .mainDiv .txtDiv {
+    padding-block: 20px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 991.98px) and (max-width: 1199.97px) {
+  .navbar,
+  .home,
+  .demos,
+  .pages,
+  .caseStudy,
+  .support,
+  .contact {
+    padding-inline: 50px;
+  }
+  .demos .header1 h3,
+  .pages .header h3,
+  .caseStudy .header h3 {
+    padding-inline: 250px;
+  }
+  .demos .txtDiv {
+    padding-inline: 25px;
+  }
+  .contact .ul1 {
+    width: 25%;
+  }
+  .pages .mainDiv {
+    justify-content: center;
+    text-align: center;
+  }
+  .pages .mainDiv .txtDiv {
+    padding-block: 20px;
+  }
+}
+
+/* Common-Properties */
+@media (max-width: 991.97px) {
+  .navbar .navbar-ul,
+  .navbar button {
+    display: none;
+  }
+  .navbar .bar-div,
+  .tablet-navbar-ul-div {
+    display: block;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .tablet-navbar-ul-div {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    position: fixed;
+    padding-block: 0;
+    z-index: 99;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: var(--black-color);
+    border-top: 1px solid var(--transparentWhite-color);
+    transition: padding-block 0.5s ease, max-height 0.5s ease;
+  }
+  .tablet-navbar-ul-div li {
+    padding-block: 15px;
+  }
+  .tablet-navbar-ul-div li * {
+    text-transform: capitalize;
+  }
+  .tablet-navbar-ul-div li a {
+    color: var(--white-color);
+  }
+  .tablet-navbar-ul-div button {
+    margin-inline-start: auto;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-block: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--electric-indigo);
+  }
+  .tablet-navbar-ul-div button a {
+    color: var(--white-color);
+    font-weight: 500;
+    font-size: 16px;
+  }
+  .tablet-navbar-ul-div button span {
+    text-transform: capitalize;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 767.98px) and (max-width: 991.97px) {
+  .navbar,
+  .home,
+  .demos,
+  .pages,
+  .caseStudy,
+  .support,
+  .contact {
+    padding-inline: 30px;
+  }
+  .home .leftDiv h1 {
+    font-size: 33px;
+  }
+  .demos .header1 h2,
+  .demos .header2 h2,
+  .pages .header h2,
+  .caseStudy .header h2 {
+    font-size: 25px;
+  }
+  .demos .header1 h3,
+  .demos .header2 h3,
+  .pages .header h3,
+  .caseStudy .header h3 {
+    font-size: 23px;
+  }
+  .demos .header1 h3,
+  .pages .header h3,
+  .caseStudy .header h3 {
+    padding-inline: 150px;
+  }
+  .demos .txtDiv {
+    padding-inline: 20px;
+  }
+  .demos .story .svg0 {
+    width: 1000px;
+    margin-top: -80px;
+  }
+  .demos .story .svg1 {
+    width: 200px;
+  }
+  .demos .story .svg2 {
+    width: 100px;
+    position: absolute;
+    left: 149px;
+    top: 15px;
+  }
+  .demos .story .svg3 {
+    position: absolute;
+    right: 50px;
+    top: 100px;
+    width: 100px;
+  }
+  .demos .story .rightDiv p {
+    padding-right: 0;
+  }
+  .pages .mainDiv {
+    text-align: center;
+    padding-block: 20px;
+    justify-content: center;
+  }
+  .pages .mainDiv .txtDiv {
+    padding-block: 20px;
+  }
+  .pages .mainDiv svg {
+    width: 350px;
+  }
+  .pages .txtDiv h4 {
+    font-size: 16px;
+  }
+  .pages .botDiv p {
+    width: 450px;
+  }
+  .pages .svg1 {
+    left: 20px;
+    top: 170px;
+  }
+  .caseStudy .div4 {
+    margin-top: -120px;
+  }
+  .support p {
+    padding-inline: 100px;
+  }
+  .contact .ul1 {
+    width: 26%;
+  }
+  .contact .topDiv p {
+    width: 450px;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 575.98px) and (max-width: 767.97px) {
+  .navbar,
+  .home,
+  .demos,
+  .pages,
+  .caseStudy,
+  .support,
+  .contact {
+    padding-inline: 20px;
+  }
+  .home .leftDiv h1 {
+    font-size: 30px;
+  }
+  .demos .header1 h2,
+  .demos .header2 h2,
+  .pages .header h2,
+  .caseStudy .header h2 {
+    font-size: 22px;
+  }
+  .demos .header1 h3,
+  .demos .header2 h3,
+  .pages .header h3,
+  .caseStudy .header h3 {
+    font-size: 20px;
+  }
+  .demos .header1 h3,
+  .pages .header h3,
+  .caseStudy .header h3 {
+    padding-inline: 100px;
+  }
+  .demos .trackDiv .graphic,
+  .web,
+  .content {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+    padding-inline: 40px;
+  }
+  .demos .txtDiv {
+    padding-inline: 20px;
+    text-align: center;
+  }
+  .demos .story .svg0 {
+    margin-top: -100px;
+  }
+  .demos .story .svg1 {
+    width: 120px;
+    margin-top: -50px;
+  }
+  .demos .story .svg2 {
+    width: 70px;
+    position: absolute;
+    left: 85px;
+    top: 5px;
+  }
+  .demos .story .svg3 {
+    position: absolute;
+    right: 20px;
+    top: 50px;
+    width: 100px;
+  }
+  .demos .story .rightDiv {
+    padding-left: 30px;
+  }
+  .demos .story .rightDiv p {
+    padding-right: 0;
+    margin-top: -80px;
+  }
+  .pages .mainDiv {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding-block: 20px;
+  }
+  .pages .mainDiv .txtDiv {
+    padding-block: 20px;
+  }
+  .pages .mainDiv svg {
+    width: 350px;
+  }
+  .pages .txtDiv h4 {
+    font-size: 16px;
+  }
+  .pages .botDiv p {
+    width: 450px;
+  }
+  .pages .svg1 {
+    left: 10px;
+    top: 150px;
+    width: 80px;
+  }
+  .pages .botDiv {
+    width: 80%;
+    text-align: center;
+    justify-content: center;
+  }
+  .caseStudy .mainDiv {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+  .support p {
+    padding-inline: 100px;
+  }
+  .contact .topDiv {
+    width: 80%;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+  }
+  footer ul,
+  .contact .ul1 {
+    width: 50%;
+    padding-bottom: 40px;
+    padding-inline: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+  }
+  footer .ul5 {
+    padding-bottom: 0;
+  }
+}
+
+/* Too Small SCreen*/
+@media (max-width: 575.97px) {
+  .navbar,
+  .home,
+  .demos,
+  .pages,
+  .caseStudy,
+  .support,
+  .contact {
+    padding-inline: 20px;
+  }
+  .navbar .navbar-logo {
+    font-size: 18px;
+  }
+  .home .leftDiv .para1 {
+    font-size: 15px;
+  }
+  .home .leftDiv h1 {
+    font-size: 18px;
+  }
+  .home .leftDiv .para2 {
+    font-size: 15px;
+  }
+  .home .leftDiv button a {
+    font-size: 12px;
+  }
+  .home .rightDiv .imgDiv svg {
+    width: 90%;
+  }
+  .demos .header1 h2,
+  .demos .header2 h2,
+  .pages .header h2,
+  .caseStudy .header h2 {
+    font-size: 18px;
+  }
+  .demos .header1 h3,
+  .demos .header2 h3,
+  .pages .header h3,
+  .caseStudy .header h3 {
+    font-size: 16px;
+  }
+  .demos .header1 h3,
+  .pages .header h3,
+  .caseStudy .header h3 {
+    padding-inline: 20px;
+  }
+  .demos .trackDiv .graphic,
+  .web,
+  .content {
+    width: 95%;
+    margin: auto;
+    margin-bottom: 20px;
+    padding-inline: 15px;
+  }
+  .demos .txtDiv {
+    width: 100%;
+    padding-inline: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .demos .txtDiv .imgDiv,
+  .demos .txtDiv .rightDiv {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  .demos .txtDiv .rightDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-inline: 0;
+  }
+  .demos .story {
+    text-align: center;
+  }
+  .demos .story .imgDiv {
+    width: 90%;
+    flex-direction: column;
+    margin: auto;
+  }
+  .demos .header2 h3 {
+    padding-bottom: 50px;
+    padding-inline: 0;
+    max-width: 500px;
+  }
+  .demos .story .svg0 {
+    width: 90%;
+    margin-top: -120px;
+  }
+  .demos .story .svg1 {
+    width: 90%;
+    margin-top: -30px;
+  }
+  .demos .story .svg2 {
+    width: 100px;
+    position: absolute;
+    left: 138px;
+    top: -20px;
+  }
+  .demos .story .svg3 {
+    position: absolute;
+    right: 30px;
+    top: 300px;
+    width: 80%;
+  }
+  .demos .story .rightDiv {
+    padding-left: 0;
+    width: 100%;
+  }
+  .demos .story .rightDiv p {
+    padding-right: 0;
+    margin-top: 180px;
+  }
+  .demos .numeric-div div {
+    width: 90%;
+    margin: auto;
+    padding-block: 20px;
+  }
+
+  .pages {
+    display: block;
+  }
+  .pages .mainDiv {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    padding-block: 20px;
+  }
+  .pages .mainDiv svg {
+    width: 150px;
+    padding-bottom: 5px;
+  }
+  .pages .mainDiv .txtDiv {
+    width: 100%;
+  }
+  .pages .txtDiv h4 {
+    font-size: 16px;
+  }
+  .pages .svg1 {
+    left: 10px;
+    top: 120px;
+    width: 30px;
+  }
+  .pages .botDiv {
+    width: 95%;
+    text-align: center;
+    justify-content: center;
+  }
+  .caseStudy .mainDiv {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  .caseStudy .mainDiv h4,
+  .caseStudy .mainDiv p {
+    padding-left: 0;
+  }
+  .pages .botDiv p {
+    width: 100%;
+  }
+  .support p {
+    padding-inline: 10px;
+  }
+  .contact .topDiv {
+    width: 95%;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+  }
+  .contact .topDiv p {
+    width: 100%;
+  }
+  footer ul,
+  .contact .ul1 {
+    width: 95%;
+    padding-bottom: 40px;
+    padding-inline: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+  }
+  footer .ul5 {
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: 399.98px) and (max-width: 575.96px) {
+  .demos .story .svg0 {
+    width: 90%;
+    margin-top: -120px;
+  }
+  .demos .story .svg1 {
+    width: 90%;
+    margin-top: 40px;
+  }
+  .demos .story .svg2 {
+    width: 100px;
+    position: absolute;
+    left: 210px;
+    top: 20px;
+  }
+  .demos .story .svg3 {
+    position: absolute;
+    right: 30px;
+    top: 420px;
+    width: 80%;
+  }
+  .demos .story .rightDiv p {
+    margin-top: 240px;
+  }
+}
+
+@media (max-width: 399.97px) {
+  .demos .story .svg0 {
+    width: 90%;
+    margin-top: -120px;
+  }
+  .demos .story .svg1 {
+    width: 90%;
+    margin-top: -30px;
+  }
+  .demos .story .svg2 {
+    width: 100px;
+    position: absolute;
+    left: 138px;
+    top: -20px;
+  }
+  .demos .story .svg3 {
+    position: absolute;
+    right: 30px;
+    top: 300px;
+    width: 80%;
+  }
+  .demos .story .rightDiv p {
+    margin-top: 180px;
+  }
+}
