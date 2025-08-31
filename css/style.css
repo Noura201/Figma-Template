@@ -1,14 +1,38 @@
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../assets/fonts/gilroy/Gilroy-Thin.ttf');
+  font-weight: 100; /* Thin */
+  font-style: normal; 
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../assets/fonts/gilroy/Gilroy-Regular.ttf');
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../assets/fonts/gilroy/Gilroy-Bold.ttf');
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Rubik';
+  src: url('../assets/fonts/Rubik/static/Rubik-Bold.ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   text-decoration: none;
-  font-family: "Poppins", sans-serif;
-  font-style: normal;
   list-style-type: none;
 }
 body {
   font-size: 16px;
+  font-family: 'Gilroy','sans serif';
   font-weight: 400;
 }
 html {
@@ -26,7 +50,7 @@ html {
   --black-color: hsl(0, 0%, 0%);
   --white-color: hsl(0, 0%, 100%);
   --grayish-blue: hsl(210, 20%, 96%);
-  --red-color: hsl(0, 100%, 50%);
+  --red-color: hsla(0, 90%, 64%, 1);
   --mid-gray: hsl(0, 0%, 43%);
   --mint-green: hsl(135, 100%, 76%);
   --electric-indigo: hsl(244, 86%, 59%);
@@ -37,9 +61,7 @@ html {
 /* Navbar-Div-Start */
 .navbar {
   width: 100%;
-  height: 80px;
-  padding: 15px 150px;
-  position: fixed;
+  position: sticky;
   z-index: 9999;
   display: flex;
   justify-content: flex-start;
@@ -48,6 +70,7 @@ html {
 }
 .navbar .navbar-logo {
   font-size: 24px;
+  font-family: 'Rubik','sans-serif';
   font-weight: 700;
   color: var(--black-color);
 }
@@ -58,10 +81,11 @@ html {
   display: flex;
   align-items: center;
   list-style: none;
-  padding-inline: 30px;
-}
-.navbar .navbar-ul li {
-  padding-inline: 15px;
+  font-size: 15px;
+  font-weight: 700;
+  width: 357px;
+  height: 26px;
+  justify-content: space-between;
 }
 .navbar .navbar-ul li a {
   color: var(--black-color);
@@ -71,7 +95,8 @@ html {
 }
 .navbar button {
   margin-inline-start: auto;
-  padding: 10px 15px;
+  width: 209px;
+  height: 50px;
   border-radius: 10px;
   border: none;
   cursor: pointer;
@@ -79,8 +104,8 @@ html {
 }
 .navbar button a {
   color: var(--white-color);
-  font-weight: 500;
-  font-size: 16px;
+  font-weight: 700;
+  font-size: 17px;
 }
 .navbar button span {
   text-transform: capitalize;
@@ -117,29 +142,30 @@ html {
 .home span {
   text-transform: capitalize;
 }
-.home .leftDiv {
-  width: 60%;
-}
-.home .rightDiv {
-  width: 40%;
-}
 .home .leftDiv .para1 {
   color: var(--red-color);
-  font-weight: 500;
+  font-size: 13px;
+  font-weight: 700;
   text-transform: uppercase;
 }
 .home .leftDiv h1 {
-  font-size: 45px;
-  font-weight: 600;
-  padding-block: 20px;
-  line-height: 110%;
+  font-size: 60px;
+  font-weight: 500;
+  line-height: 65px;
+  letter-spacing: -2px;
+  padding-block: 25px;
+  color: var(--gunmetal-color);
 }
 .home .leftDiv .para2 {
-  color: var(--mid-gray);
+  padding-right: 41px;
+  padding-bottom: 35px;
+  font-size: 19px;
+  color: var(--gunmetal-color);
 }
 .home .leftDiv button {
-  padding: 10px 15px;
-  margin-block: 30px;
+  margin-right: 321px;
+  width: 220px;
+  height: 59px;
   border-radius: 10px;
   border: none;
   cursor: pointer;
@@ -147,8 +173,8 @@ html {
 }
 .home .leftDiv button a {
   color: var(--white-color);
-  font-weight: 500;
-  font-size: 16px;
+  font-weight: 700;
+  font-size: 17px;
 }
 .home .rightDiv .imgDiv svg {
   width: 80%;
@@ -173,14 +199,16 @@ html {
 }
 .demos .header1 h2 {
   font-size: 28px;
-  padding-top: 20px;
+  font-weight: 700;
   text-transform: uppercase;
   color: var(--red-color);
 }
 .demos .header1 h3 {
-  font-size: 24px;
-  padding-top: 10px;
-  padding-inline: 300px;
+  padding-top: 5px;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 48px;
+  color: var(--gunmetal-color);
 }
 .demos .services {
   width: 100%;
@@ -194,6 +222,7 @@ html {
   flex-wrap: wrap;
   padding-block: 100px;
   text-align: center;
+  position: relative;
 }
 .demos .trackDiv .graphic {
   background-color: var(--mint-green);
@@ -211,11 +240,17 @@ html {
   padding: 50px 10px 30px;
   border-radius: 10px;
   color: var(--white-color);
+  z-index: 99;
 }
 .demos .trackDiv h4 {
   font-size: 20px;
   text-transform: capitalize;
   padding-block: 20px;
+}
+.demos .trackDiv .grpImg {
+  position: absolute;
+  right: 0;
+  top: 450px;
 }
 .demos .linkDiv {
   padding-top: 20px;
@@ -244,6 +279,12 @@ html {
   padding-block: 20px;
   padding-right: 80px;
 }
+.demos .txt {
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--gunmetal-color);
+}
 .demos .txt p {
   font-weight: 700;
 }
@@ -267,14 +308,18 @@ html {
   flex-direction: column;
 }
 .demos .header2 h2 {
-  font-size: 28px;
+  font-size: 13px;
+  font-weight: 700;
   text-transform: uppercase;
   color: var(--red-color);
 }
 .demos .header2 h3 {
-  font-size: 24px;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 48px;
   padding-top: 10px;
   max-width: 400px;
+  color: var(--gunmetal-color);
 }
 .demos .story .imgDiv {
   width: 100%;
@@ -309,9 +354,11 @@ html {
   top: 100px;
 }
 .demos .story .rightDiv p {
+  font-size: 17px;
+  line-height: 29px;
   padding-top: 40px;
-  color: var(--mid-gray);
   padding-right: 140px;
+  color: var(--gunmetal-color);
 }
 .demos .story .rightDiv p span {
   text-transform: capitalize;
@@ -328,11 +375,15 @@ html {
 }
 .demos .numeric-div h4 {
   text-transform: uppercase;
-  font-size: 26px;
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--gunmetal-color);
 }
 .demos .numeric-div p {
   padding-top: 10px;
-  color: var(--mid-gray);
+  font-size: 19px;
+  line-height: 32px;
+  color: var(--gunmetal-color);
 }
 /* Demos-Div-End */
 
@@ -362,9 +413,12 @@ html {
   color: var(--red-color);
 }
 .pages .header h3 {
-  font-size: 24px;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 48px;
   padding-top: 10px;
   padding-inline: 320px;
+  color: var(--gunmetal-color);
 }
 .pages .svg1 {
   position: absolute;
@@ -390,11 +444,15 @@ html {
   padding-inline: 30px;
 }
 .pages .txtDiv h4 {
-  font-size: 18px;
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--gunmetal-color);
   padding-bottom: 10px;
 }
 .pages .txtDiv p {
-  color: var(--mid-gray);
+  font-size: 17px;
+  line-height: 29px;
+  color: var(--gunmetal-color);
 }
 .pages .botDiv {
   width: 100%;
@@ -405,12 +463,16 @@ html {
   padding-top: 50px;
 }
 .pages .botDiv h5 {
-  font-size: 17px;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--gunmetal-color);
 }
 .pages .botDiv p {
-  padding-top: 10px;
+  font-size: 19px;
+  line-height: 32px;
+  padding-top: 20px;
+  color: var(--gunmetal-color);
   width: 500px;
-  color: var(--mid-gray);
 }
 .pages button {
   font-size: 16px;
@@ -445,13 +507,17 @@ html {
   text-align: center;
 }
 .caseStudy .header h2 {
-  font-size: 28px;
+  font-size: 13px;
+  font-weight: 700;
   padding-top: 20px;
   text-transform: uppercase;
   color: var(--red-color);
 }
 .caseStudy .header h3 {
-  font-size: 24px;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 48px;
+  color: var(--gunmetal-color);
   padding-top: 10px;
   padding-inline: 330px;
 }
@@ -470,6 +536,7 @@ html {
   text-transform: capitalize;
 }
 .caseStudy .mainDiv h4 {
+  font-size: 15px;
   padding-top: 20px;
   padding-left: 20px;
   color: var(--mid-gray);
@@ -477,7 +544,9 @@ html {
 .caseStudy .mainDiv p {
   padding-left: 20px;
   padding-top: 5px;
-  font-weight: 500;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--gunmetal-color);
 }
 .caseStudy .mainDiv p span {
   text-transform: uppercase;
@@ -494,6 +563,7 @@ html {
 .caseStudy .linkDiv a {
   color: var(--electric-indigo);
   padding-right: 10px;
+  font-weight: 700;
 }
 /* CaseStudies-Div-End */
 
@@ -513,13 +583,15 @@ html {
   text-transform: capitalize;
 }
 .support h2 {
-  font-size: 18px;
+  font-size: 13px;
+  font-weight: 700;
   color: var(--mint-green);
   text-transform: uppercase;
 }
 .support p {
-  font-size: 17px;
-  font-weight: 500;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 44px;
   padding-top: 15px;
   padding-inline: 300px;
   color: var(--white-color);
@@ -528,6 +600,13 @@ html {
   padding-top: 30px;
   text-transform: capitalize;
   color: var(--white-color);
+}
+.support .imgDiv h3 {
+  font-size: 17px;
+  font-weight: 700;
+}
+.support .imgDiv span {
+  font-size: 15px;
 }
 /* Support-Div-End */
 
@@ -556,11 +635,14 @@ html {
 }
 .contact .topDiv h5 {
   color: var(--white-color);
-  font-size: 18px;
+  font-size: 32px;
+  font-weight: 700;
 }
 .contact .topDiv p {
   padding-top: 10px;
   width: 500px;
+  font-size: 19px;
+  line-height: 32px;
   color: var(--mid-gray);
 }
 .contact button {
@@ -594,6 +676,8 @@ footer ul li {
   padding-block: 5px;
 }
 .contact .ul1 p {
+  padding-top: 30px;
+  padding-bottom: 60px;
   color: var(--mid-gray);
 }
 .contact .ul1 .social {
@@ -610,6 +694,7 @@ footer ul li {
   text-transform: capitalize;
 }
 .contact ul .header {
+  padding-bottom: 25px;
   color: var(--mid-gray);
 }
 .contact ul li a {
@@ -617,24 +702,370 @@ footer ul li {
 }
 /* Contact-Div-End */
 
+/*******************************************/
+
 /* XX-Large devices (larger desktops, 1400px and up) */
-/* @media (min-width: 1399.98px) {} */
+@media (min-width: 1399.98px) {
+  /* Navbar-Div-Start */
+  .navbar {
+    padding: 22px 248px 22px 163px;
+  }
+  .navbar .navbar-logo {
+    padding: 10px 0 12px 30px;
+  }
+  .navbar .navbar-logo a {
+    width: 153px;
+    height: 28px;
+  }
+  .navbar .navbar-ul {
+    margin-left: 67px;
+    padding-top: 11px;
+    padding-bottom: 13px;
+  }
+  .navbar button {
+    margin-left: 373px;
+  }
+  /* Navbar-Div-End */
+
+  /* Home-Div-Start */
+  .home {
+    padding: 0;
+  }
+  .home .container {
+    margin-top: 50px;
+  }
+  .home .leftDiv {
+    width: 593px;
+    height: 386px;
+    margin: 208px 77px 208px 226px;
+  }
+  .home .rightDiv {
+    width: 454px;
+    height: 478px;
+    margin: 153px 250px 175px 0;
+  }
+  /* Home-Div-End */
+
+  /* Demos-Div-Start */
+  .demos {
+    padding: 0;
+  }
+  .demos .container {
+    padding: 121px 210px 95px 233px;
+  }
+  .demos .trackDiv {
+    width: 1157.86px;
+    padding-top: 0;
+    padding-bottom: 147px;
+    justify-content: flex-start;
+  }
+  .demos .trackDiv .graphic, .web, .content {
+    width: 350px;
+    height: 483px;
+  }
+  .demos .trackDiv .web {
+    margin-left: 28px;
+    margin-right: 32px;
+  }
+  .demos .header1 h2 {
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .demos .header1 {
+    padding-inline: 260px;
+    padding-bottom: 104px;
+  }
+  .demos .trackDiv h4 {
+    font-size: 24px;
+    font-weight: 700;
+    padding-top: 41px;
+    padding-bottom: 15px;
+  }
+  .demos .trackDiv p {
+    font-size: 17px;
+    line-height: 29px;
+    padding-inline: 28px;
+    padding-bottom: 43px;
+  }
+  .demos .txtDiv {
+    padding-inline: 0;
+  }
+  .demos .txtDiv .imgDiv {
+    margin-left: 85px;
+    margin-right: 81px;
+    width: 164px;
+    height: 164px;
+  }
+  .demos .txtDiv .imgDiv svg {
+    width: 100%;
+  }
+  .demos .txtDiv .rightDiv {
+    padding-block: 0;
+  }
+  .demos .startsDiv {
+    width: 123px;
+    height: 19px;
+  }
+  .demos .startsDiv svg {
+    width: 20px;
+    height: 19px;
+  } 
+  .demos .txt {
+    padding-top: 37px;
+    padding-bottom: 15px;
+    width: 735px;
+  }
+  .demos .story {
+    margin-top: 127.5px;
+    padding-block: 0;
+  }
+  .demos .header2 {
+    width: 515px;
+    height: 198px;
+  }
+  .demos .header2 h3 {
+    padding-top: 40px;
+    max-width: 515px;
+  }
+  .demos .story .svg0 {
+    margin-top: 120px;
+  }
+  .demos .story .rightDiv {
+    padding-left: 95px;
+    margin-top: 53px;
+  }
+  .demos .story .svg3 {
+    top: 166px;
+  }
+  .demos .story .rightDiv p {
+    width: 490px;
+    padding-right: 78px;
+    padding-top: 100px;
+    padding-left: 2px;
+  }
+  .demos .numeric-div {
+    padding-top: 122px;
+    width: 1074px;
+    height: 140px;
+    justify-content: flex-start;
+  }
+  .demos .numeric-div div {
+    width: 314px;
+    height: 140px;
+  }
+  .demos .numeric-div p {
+    padding-top: 18px;
+  }
+  .demos .numeric-div .midDiv {
+    margin-left: 74px;
+    margin-right: 58px;
+  }
+  /* Demos-Div-End */
+
+  /* Pages-Div-Start */
+  .pages {
+    padding: 0;
+    margin-top: 50px;
+    margin-bottom: 0;
+  }
+  .pages .container {
+    margin: 0;
+    padding-top: 200px;
+    padding-bottom: 0;
+  }
+  .pages .header {
+    width: 589px;
+    height: 135px;
+    margin-left: 598px;
+    margin-right: 413px;
+  }
+  .pages .header h2 {
+    font-size: 13px;
+    font-weight: 700;
+    padding-top: 0;
+    padding-bottom: 23px;
+  }
+  .pages .header h3 {
+    padding: 0;
+  }
+  .pages .svg1 {
+    left: 58px;
+    top: 250px;
+  }
+  .pages .midDiv {
+    padding-top: 98px;
+    margin-left: 448px;
+    margin-right: 284px;
+    width: 868px;
+  }
+  .pages .mainDiv {
+    width: 409px;
+    height: auto;
+    align-items: flex-start;
+  }
+  .pages .mainDiv1, .mainDiv2 {
+    margin-bottom: 80px;
+  }
+  .pages .txtDiv {
+    width: 330px;
+    padding-left: 30px;
+    padding-right: 0;
+  }
+  .pages .botDiv {
+    padding-top: 0;
+    width: 1110px;
+    height: 128px;
+    margin: 200px 153px 10px 337px;
+  }
+  .pages .botDiv p {
+    padding-top: 20px;
+  }
+  .pages button {
+    width: 209px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  /* Pages-Div-End */
+
+  /* CaseStudies-Div-Start */
+  .caseStudy {
+    margin: 0;
+    padding: 0;
+  }
+  .caseStudy .container {
+    padding-top: 200px;
+    padding-bottom: 0;
+  }
+  .caseStudy .header {
+    width: 589px;
+    margin-left: 491px;
+    margin-right: 520px;
+  }
+  .caseStudy .header h2 {
+    padding-top: 0;
+  }
+  .caseStudy .header h3 {
+    padding-top: 23px;
+    padding-inline: 0;
+  }
+  .caseStudy .imgDiv {
+    padding-top: 90px;
+    margin-left: 250px;
+    margin-right: 280px;
+    width: 1070px;
+  }
+  .caseStudy .mainDiv {
+    padding: 0;
+    margin: 0;
+    width: 500px;
+    height: fit-content;
+  }
+  .caseStudy .mainDiv1, .caseStudy .mainDiv2 {
+    margin-bottom: 60px;
+  }
+  .caseStudy .div4 {
+    margin-top: -180px;
+  }
+  .caseStudy .linkDiv {
+    padding-top: 95px;
+    padding-bottom: 114px;
+  }
+  /* CaseStudies-Div-End */
+
+  /* Support-Div-Start */
+  .support {
+    padding-block: 134px;
+    padding-inline: 473px;
+  }
+  .support .container {
+    width: 655px;
+  }
+  .support p {
+    padding-top: 35px;
+    padding-inline: 10px;
+  }
+  .support .imgDiv {
+    padding-top: 43px;
+  }
+  .support .imgDiv h3 {
+    padding-top: 17px;
+    padding-bottom: 7px;
+  }
+  /* Support-Div-End */ 
+
+  /* Contact-Div-Start */
+  .contact {
+    padding-top: 0;
+    padding-left: 246px;
+    padding-right: 244px;
+  }
+  .contact .topDiv {
+    margin-top: 34px;
+    padding-top: 0;
+    width: 1110px;
+  }
+  .contact .topDiv div {
+    width: 589px;
+  }
+  .contact .topDiv p {
+    padding-top: 20px;
+  }
+  .contact button {
+    width: 209px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  /* Contact-Div-End */
+
+  /* Footer-Div-Start */
+  .contact footer {
+    padding-block: 122px;
+  }
+  .contact .ul1 {
+    width: 274px;
+  }
+  .contact .ul2 {
+    width: 144px;
+  }
+  .contact .ul3 {
+    width: 125px;
+  }
+  .contact .ul4 {
+    width: 156px;
+  }
+  .contact .ul5 {
+    width: 166px;
+  }
+  /* Footer-Div-End */
+
+}
+
+/********************************************/
 
 /* X-Large devices (large desktops, 1200px and up) */
-@media (min-width: 1199.98px) {
-  .navbar,
-  .home,
-  .demos,
-  .pages,
-  .caseStudy,
-  .support,
-  .contact {
+@media (min-width: 1199.98px) and (max-width: 1399.97px) {
+  .navbar {
+    padding: 22px 100px;
+  }
+  .navbar .navbar-ul {
+    margin-left: 67px;
+  }
+
+  .navbar, .home, .demos, .pages, 
+  .caseStudy, .support, .contact {
     padding-inline: 100px;
   }
   .demos .header1 h3,
   .pages .header h3,
   .caseStudy .header h3 {
     padding-inline: 250px;
+  }
+  .demos .header2 h3 {
+    max-width: 600px;
   }
   .demos .txtDiv {
     padding-inline: 25px;
@@ -646,27 +1077,54 @@ footer ul li {
   .pages .mainDiv .txtDiv {
     padding-block: 20px;
   }
+  .support p {
+    padding-inline: 200px;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 991.98px) and (max-width: 1199.97px) {
-  .navbar,
-  .home,
-  .demos,
-  .pages,
-  .caseStudy,
-  .support,
-  .contact {
+  .navbar {
+    padding: 22px 100px;
+  }
+  .navbar .navbar-ul {
+    margin-left: 67px;
+  }
+  .navbar, .home, .demos, .pages, 
+  .caseStudy, .support, .contact {
     padding-inline: 50px;
   }
   .demos .header1 h3,
   .pages .header h3,
   .caseStudy .header h3 {
-    padding-inline: 250px;
+    padding-inline: 150px;
+  }
+  .home .leftDiv {
+    width: 450px;
+  }
+  .home .rightDiv {
+    width: 350px;
+    margin-left: 50px;
+  }
+  .home .rightDiv .imgDiv img {
+    width: 100%;
   }
   .demos .txtDiv {
     padding-inline: 25px;
   }
+  .demos .header2 h3 {
+    max-width: 600px;
+  }
+  .demos .story .svg1 {
+    width: 250px;
+  }
+  .demos .story .svg2 {
+    left: 175px;
+    top: -40px;
+  }
+  .demos .story .rightDiv p {
+    padding-right: 10px;
+  } 
   .contact .ul1 {
     width: 25%;
   }
@@ -677,6 +1135,16 @@ footer ul li {
   .pages .mainDiv .txtDiv {
     padding-block: 20px;
   }
+  .caseStudy .mainDiv {
+    width: 430px;
+  }
+  .caseStudy .mainDiv img {
+    width: 100%;
+  }
+  .support p {
+    padding-inline: 100px;
+  }
+  
 }
 
 /* Common-Properties */
@@ -685,14 +1153,14 @@ footer ul li {
   .navbar button {
     display: none;
   }
-  .navbar .bar-div,
-  .tablet-navbar-ul-div {
-    display: block;
-  }
   .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  .navbar .bar-div {
+    display: block;
+    cursor: pointer;
   }
   .tablet-navbar-ul-div {
     display: block;
@@ -739,17 +1207,22 @@ footer ul li {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 767.98px) and (max-width: 991.97px) {
-  .navbar,
-  .home,
-  .demos,
-  .pages,
-  .caseStudy,
-  .support,
-  .contact {
+  .navbar {
+    padding-top: 20px;
+  }
+  .navbar, .home, .demos, .pages,
+  .caseStudy, .support, .contact {
     padding-inline: 30px;
+  }
+  .home .leftDiv, .home .rightDiv {
+    width: 300px;
+  }
+  .home .rightDiv img {
+    width: 100%;
   }
   .home .leftDiv h1 {
     font-size: 33px;
+    line-height: 110%;
   }
   .demos .header1 h2,
   .demos .header2 h2,
@@ -762,6 +1235,7 @@ footer ul li {
   .pages .header h3,
   .caseStudy .header h3 {
     font-size: 23px;
+    line-height: 110%;
   }
   .demos .header1 h3,
   .pages .header h3,
@@ -772,17 +1246,16 @@ footer ul li {
     padding-inline: 20px;
   }
   .demos .story .svg0 {
-    width: 1000px;
-    margin-top: -80px;
+    width: 250px;
   }
   .demos .story .svg1 {
-    width: 200px;
+    width: 180px;
   }
   .demos .story .svg2 {
-    width: 100px;
+    width: 80px;
     position: absolute;
     left: 149px;
-    top: 15px;
+    top: -40px;
   }
   .demos .story .svg3 {
     position: absolute;
@@ -814,6 +1287,12 @@ footer ul li {
     left: 20px;
     top: 170px;
   }
+  .caseStudy .mainDiv {
+    width: 350px;
+  }
+  .caseStudy .mainDiv img {
+    width: 100%;
+  }
   .caseStudy .div4 {
     margin-top: -120px;
   }
@@ -830,17 +1309,22 @@ footer ul li {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 575.98px) and (max-width: 767.97px) {
-  .navbar,
-  .home,
-  .demos,
-  .pages,
-  .caseStudy,
-  .support,
-  .contact {
+  .navbar {
+    padding-top: 20px;
+  }
+  .navbar, .home, .demos, .pages,
+  .caseStudy, .support, .contact {
     padding-inline: 20px;
+  }
+  .home .leftDiv, .home .rightDiv {
+    width: 250px;
+  }
+  .home .rightDiv img {
+    width: 100%;
   }
   .home .leftDiv h1 {
     font-size: 30px;
+    line-height: 110%;
   }
   .demos .header1 h2,
   .demos .header2 h2,
@@ -853,6 +1337,7 @@ footer ul li {
   .pages .header h3,
   .caseStudy .header h3 {
     font-size: 20px;
+    line-height: 110%;
   }
   .demos .header1 h3,
   .pages .header h3,
@@ -867,35 +1352,40 @@ footer ul li {
     margin-bottom: 20px;
     padding-inline: 40px;
   }
+  .demos .header2 h3 {
+    padding-bottom: 20px;
+  }
   .demos .txtDiv {
     padding-inline: 20px;
     text-align: center;
   }
   .demos .story .svg0 {
-    margin-top: -100px;
+    width: 200px;
   }
   .demos .story .svg1 {
-    width: 120px;
-    margin-top: -50px;
+    width: 180px;
+    top: 50px;
   }
   .demos .story .svg2 {
-    width: 70px;
+    width: 60px;
     position: absolute;
-    left: 85px;
-    top: 5px;
+    left: 150px;
+    top: -40px;
   }
   .demos .story .svg3 {
     position: absolute;
     right: 20px;
     top: 50px;
-    width: 100px;
+    width: 80px;
   }
   .demos .story .rightDiv {
     padding-left: 30px;
   }
   .demos .story .rightDiv p {
-    padding-right: 0;
-    margin-top: -80px;
+    padding-right: 10px;
+  }
+  .demos .trackDiv .grpImg {
+    top: 1250px;
   }
   .pages .mainDiv {
     width: 80%;
@@ -932,8 +1422,11 @@ footer ul li {
     margin: auto;
     text-align: center;
   }
+  .caseStudy .mainDiv img {
+    width: 100%;
+  }
   .support p {
-    padding-inline: 100px;
+    padding-inline: 30px;
   }
   .contact .topDiv {
     width: 80%;
@@ -959,32 +1452,49 @@ footer ul li {
 
 /* Too Small SCreen*/
 @media (max-width: 575.97px) {
-  .navbar,
-  .home,
-  .demos,
-  .pages,
-  .caseStudy,
-  .support,
-  .contact {
-    padding-inline: 20px;
+  .navbar {
+    padding-top: 20px;
+  }
+  .navbar, .home, .demos, .pages,
+  .caseStudy, .support, .contact {
+    padding-inline: 10px;
   }
   .navbar .navbar-logo {
     font-size: 18px;
+  }
+  .home {
+    height: auto;
+  }
+  .home .container {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .home .leftDiv, .home .rightDiv {
+    width: fit-content;
+    max-width: 500px;
+    margin-bottom: 20px;
   }
   .home .leftDiv .para1 {
     font-size: 15px;
   }
   .home .leftDiv h1 {
     font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 110%;
   }
   .home .leftDiv .para2 {
     font-size: 15px;
+    padding-inline: 0;
+  }
+  .home .leftDiv button {
+    margin: 0;
   }
   .home .leftDiv button a {
     font-size: 12px;
   }
-  .home .rightDiv .imgDiv svg {
-    width: 90%;
+  .home .rightDiv .imgDiv img {
+    width: 100%;
   }
   .demos .header1 h2,
   .demos .header2 h2,
@@ -997,6 +1507,7 @@ footer ul li {
   .pages .header h3,
   .caseStudy .header h3 {
     font-size: 16px;
+    line-height: 110%;
   }
   .demos .header1 h3,
   .pages .header h3,
@@ -1110,10 +1621,13 @@ footer ul li {
     justify-content: center;
   }
   .caseStudy .mainDiv {
-    width: 100%;
+    width: 95%;
     margin: auto;
     text-align: center;
   }
+  .caseStudy .mainDiv img {
+    width: 100%;
+  } 
   .caseStudy .mainDiv h4,
   .caseStudy .mainDiv p {
     padding-left: 0;
